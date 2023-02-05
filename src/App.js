@@ -23,7 +23,7 @@ const App = () => {
             }
 
             setLoading(true);
-            const res = await axios.put(
+            const res = await axios.post(
                 `https://mobilinfo-backend.doodie.workers.dev/?phoneNumber=${phoneNumber}`
             );
             const data = res.data;
