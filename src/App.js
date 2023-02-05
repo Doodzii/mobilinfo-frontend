@@ -24,12 +24,8 @@ const App = () => {
 
             setLoading(true);
             const res = await axios.put(
-                "http://135.181.20.58:25587/getMobileInfo",
-                {
-                    phoneNumber: phoneNumber,
-                }
+                `https://mobilinfo-backend.doodie.workers.dev/?phoneNumber=${phoneNumber}`
             );
-
             const data = res.data;
 
             setData(data);
