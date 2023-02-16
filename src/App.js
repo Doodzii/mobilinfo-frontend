@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
+import Result from "./components/Result";
+
 const App = () => {
     //This is constantly updated from the input field
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -23,19 +25,18 @@ const App = () => {
             }
 
             setLoading(true);
+
             const res = await axios.post(
                 `https://mobilinfo-backend.doodie.workers.dev/?phoneNumber=${phoneNumber}`
             );
             const data = res.data;
-
             setData(data);
             setLoading(false);
         } catch (error) {
-            setData({});
+            setData({
+                provider: null,
+            });
             setLoading(false);
-            setError(
-                "Der skete en fejl! Kontakt m101304 hvis dette fortsætter."
-            );
         }
     };
 
@@ -55,32 +56,7 @@ const App = () => {
             return <></>;
         }
 
-        //Couldn't find the phone number
-        if (data.provider == null || data.valid == false) {
-            return (
-                <div className="error">
-                    <p>
-                        Jeg kunne ikke finde det telefonnummer!
-                        <br></br>
-                        Husk! Det er ikke alle numre jeg kan finde.
-                    </p>
-                </div>
-            );
-        }
-
-        return (
-            <div className="result">
-                <p>
-                    Udbyder: <b>{data.provider}</b>
-                </p>
-                <p>
-                    Gyldig: <b>{data.valid ? "JA" : "NEJ"}</b>
-                </p>
-                <p>
-                    ICC GUIDE: <i>Kommer..</i>
-                </p>
-            </div>
-        );
+        return <Result data={data} />;
     };
 
     return (

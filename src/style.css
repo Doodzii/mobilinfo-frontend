@@ -40,17 +40,6 @@
     background-color: rgb(27, 203, 53);
 }
 
-.result {
-    font-size: 20px;
-    margin-top: 10px;
-    border: 2px solid #4ba846;
-    padding: 15px;
-}
-
-.result p {
-    margin: 0px;
-}
-
 .error {
     color: red;
     font-size: 20px;
@@ -71,6 +60,39 @@
     border: 10px solid #bcffb8; /* Light grey */
     border-top: 10px solid #25ff1a; /* Black */
     border-radius: 50%;
-    animation: spinner 0.5s ease infinite;
+    animation: spinner 0.5s linear infinite;
     margin-top: 20px;
+}
+
+.result {
+    font-size: 22px;
+    margin-top: 10px;
+    background-color: rgb(245, 245, 245);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.121);
+}
+
+.provider {
+    background-color: rgb(233, 255, 220);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.result p {
+    margin: 0px;
+    height: 35px;
+}
+
+.result h1 {
+    margin: 0;
+}
+
+.guideContainer {
+    margin-top: 25px;
+}
+
+.guideList {
+    margin: 0;
+    font-size: 19px;
 }
