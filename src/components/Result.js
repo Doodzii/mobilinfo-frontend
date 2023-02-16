@@ -60,7 +60,12 @@ const Guide = (props) => {
     let provider = props.provider.toLowerCase();
 
     if (!simCardGuides[provider]) {
-        return <p>???</p>;
+        return (
+            <p>
+                Ingen simkort guide. Skriv til m101304 på Teams hvis du kender
+                metoden.
+            </p>
+        );
     }
 
     let lines = simCardGuides[provider];
