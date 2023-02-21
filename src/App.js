@@ -84,6 +84,11 @@ const App = () => {
                 onChange={(event) => {
                     setPhoneNumber(event.target.value);
                 }}
+                onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                        retrieveMobileInfo();
+                    }
+                }}
             ></input>
 
             <button
