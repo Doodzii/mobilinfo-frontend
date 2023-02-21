@@ -19,7 +19,17 @@ const App = () => {
         try {
             //Check if the input is 8 characters long
             setError(null);
-            if (phoneNumber.length !== 8) {
+
+            let realNumber = phoneNumber.replaceAll(" ", "");
+
+            console.log(/^([a-z0-9]{5,})$/.test("abc1")); // false
+
+            if (!/^[0-9]+$/.test(realNumber)) {
+                setError("Telefonnummeret må kun bestå af tal!");
+                return;
+            }
+
+            if (realNumber.length !== 8) {
                 setError("Telefonnummeret skal være 8 cifre!");
                 return;
             }
@@ -27,7 +37,7 @@ const App = () => {
             setLoading(true);
 
             const res = await axios.post(
-                `https://mobilinfo-backend.doodie.workers.dev/?phoneNumber=${phoneNumber}`
+                `https://mobilinfo-backend.doodie.workers.dev/?phoneNumber=${realNumber}`
             );
             const data = res.data;
             setData(data);
@@ -74,7 +84,6 @@ const App = () => {
                 onChange={(event) => {
                     setPhoneNumber(event.target.value);
                 }}
-                maxLength="8"
             ></input>
 
             <button
