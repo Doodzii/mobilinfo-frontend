@@ -12,7 +12,7 @@
     margin: 0;
     margin-top: 30px;
     font-size: 40px;
-    color: #4ba846;
+    color: #49c3ef;
 }
 .secondHeader{
     margin: 0;
@@ -34,10 +34,11 @@
     height: 40px;
     border: 0px;
     cursor: pointer;
-    background-color: rgb(136, 254, 136);
+    background-color: #49c3ef;
+    font-size: 19px;
 }
 .searchButton:hover {
-    background-color: rgb(27, 203, 53);
+    background-color: #2fa6d2;
 }
 
 .error {
@@ -57,8 +58,8 @@
 .loading-spinner {
     width: 50px;
     height: 50px;
-    border: 10px solid #bcffb8; /* Light grey */
-    border-top: 10px solid #25ff1a; /* Black */
+    border: 10px solid #8fdefb; /* Light grey */
+    border-top: 10px solid #4bc5f1; /* Black */
     border-radius: 50%;
     animation: spinner 0.5s linear infinite;
     margin-top: 20px;
@@ -70,14 +71,30 @@
     background-color: rgb(245, 245, 245);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.121);
+    box-shadow: 10px 10px rgba(8, 117, 176, 0.482);
 }
 
+
 .provider {
-    background-color: rgb(233, 255, 220);
+    background: linear-gradient(-45deg, #ee76528c, #e73c7e81, #23a5d577, #23d5ab7e);
+    background-size: 400% 400%;
+    animation: gradient 7.5s ease infinite;
     padding: 5px;
     border-radius: 5px;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .result p {
     margin: 0px;
