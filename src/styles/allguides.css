@@ -1,0 +1,23 @@
+.allguides {
+    margin-top: 30px;
+    background-color: #92a4ff27;
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);
+}
+
+.allguides h1 {
+    text-align: center;
+    color: #54bcf9;
+    margin-bottom: 0;
+}
+
+.allguides h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
