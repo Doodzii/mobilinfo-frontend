@@ -12,8 +12,6 @@ const Result = (props) => {
         for (var line in guide) 
             text = `${text}${1 + parseInt(line)}) ${guide[line]}\n`
         await navigator.clipboard.writeText(text);
-
-        window.open("https://etrayprivat.tdk.dk/eTrayWeb/N/Master.html#/Webform?f=Kundeservice&k=Afsend%20sms");
     }
 
     
@@ -42,7 +40,7 @@ const Result = (props) => {
                 {guideExists ? <img src={imagePath} /> : <p></p>}
             </div>
             <Guide provider={data.provider} />
-            <button onClick={copyAndSendGuide} class="copyGuide">Kopiér guide & åben eTray afsend SMS</button>
+            <button onClick={copyAndSendGuide} class="copyGuide">Kopiér guide tekst</button>
         </div>
     );
 };
