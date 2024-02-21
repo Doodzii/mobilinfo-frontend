@@ -14,5 +14,5 @@
 }
 
 #root {
-    background-color: rgb(86, 158, 180);
+    background: linear-gradient(-45deg, #ee76528c, #e73c7e81, #23a5d577, #23d5ab7e);
 }
