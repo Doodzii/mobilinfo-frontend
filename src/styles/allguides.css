@@ -1,7 +1,11 @@
 .allguides {
-    margin-top: 30px;
-    background-color: #92a4ff27;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    font-size: 22px;
+    margin-top: 10px;
+    background-color: #ffffff27;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);

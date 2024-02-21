@@ -80,37 +80,39 @@ const App = () => {
                 <b>Mobil Info</b>
             </p>
 
-            <input
-                className="number"
-                placeholder="Telefonnummer"
-                onChange={(event) => {
-                    setPhoneNumber(event.target.value);
-                }}
-                onKeyDown={(event) => {
-                    if (event.key === "Enter") {
+            <div class="search-container">
+                <input
+                    className="number"
+                    placeholder="Telefonnummer"
+                    onChange={(event) => {
+                        setPhoneNumber(event.target.value);
+                    }}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter") {
+                            retrieveMobileInfo();
+                        }
+                    }}
+                ></input>
+
+                <button
+                    className="searchButton"
+                    onClick={() => {
                         retrieveMobileInfo();
-                    }
-                }}
-            ></input>
+                    }}
+                >
+                    Hent data
+                </button>
 
-            <button
-                className="searchButton"
-                onClick={() => {
-                    retrieveMobileInfo();
-                }}
-            >
-                Hent data
-            </button>
-
-            {isLoading ? (
-                <>
-                    <div className="loading-spinner" />
-                </>
-            ) : (
-                <>
-                    <InfoComponent />
-                </>
-            )}
+                {isLoading ? (
+                    <>
+                        <div className="loading-spinner" />
+                    </>
+                ) : (
+                    <>
+                        <InfoComponent />
+                    </>
+                )}
+            </div>
 
             <Allguides />
         </div>

@@ -27,6 +27,20 @@
     font-size: 25px;
 }
 
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    font-size: 22px;
+    margin-top: 10px;
+    background-color: #ffffff27;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 10px 10px 23px -10px rgba(0, 0, 0, 0.36);
+}
 
 .number {
     width: 300px;
