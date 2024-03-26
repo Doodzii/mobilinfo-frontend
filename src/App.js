@@ -80,6 +80,23 @@ const App = () => {
                 <b>Mobil Info</b>
             </p>
 
+            <div class="not-working">
+                <h3>Siden virker nok ikke længere. :(</h3>
+                <p>
+                    Siden har kun fungeret grundet den hentede data gennem en service der hedder 'Evercall'. 
+                </p>
+                <p>
+                De desværre har nok opdaget at der kommer cirka 15.000 requests hver eneste uge, som ikke stammer fra deres eget system.
+                </p>
+                <p>
+                    Det var godt så længe det varede! Skriv gerne andre idéer til hvad jeg kan lave, som gør jeres arbejde nemmere.
+                </p>
+                <p>
+                    Venlig hilsen
+                    Alexander Koch
+                </p>
+            </div>
+
             <div class="search-container">
                 <input
                     className="number"
